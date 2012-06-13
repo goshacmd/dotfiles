@@ -1,0 +1,9 @@
+"" Disabling the toolbar
+set go-=T
+"" And scrollbar
+set guioptions=aAce
+
+set transparency=10 "" Requires an experimental renderer
+set guifont=Menlo:h14
+
+colorscheme solarized

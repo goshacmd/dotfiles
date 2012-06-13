@@ -1,0 +1,25 @@
+[core]
+  editor = mvim -f
+  quotepath = false
+  excludesfile = ~/.gitignore
+
+[user]
+  name = Gosha Arinich
+  email = me@goshakkk.name
+
+[github]
+  user = goshakkk
+
+[color]
+  ui = auto
+  interactive = auto
+
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st = status
+  s = status -s
+  ci = commit --all
+  co = checkout
+  nb = checkout -b
+  br = branch --verbose
+  forget = rm --cached
