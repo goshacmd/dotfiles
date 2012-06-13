@@ -55,9 +55,7 @@ precmd() {
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if [[ -e $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
