@@ -1,6 +1,6 @@
 [submodule "janus/powerline"]
-	path = janus/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
+  path = janus/powerline
+  url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "janus/surround"]
-	path = janus/surround
-	url = https://github.com/tpope/vim-surround.git
+  path = janus/surround
+  url = https://github.com/tpope/vim-surround.git
