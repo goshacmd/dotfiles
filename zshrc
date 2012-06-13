@@ -14,7 +14,7 @@ fi
 # Aliases
 alias b="bundle"
 alias be="bundle exec"
-alias ci="git commit -m"
+alias ci="git commit -am"
 alias g="git"
 alias gi="gem install"
 alias r="rails"
