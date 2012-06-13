@@ -2,6 +2,7 @@
 export EDITOR="mvim -f"
 export VISUAL=$EDITOR
 export PROJECTSDIR=$HOME/Projects
+export PROJDIR=$PROJECTSDIR
 export CODEDIR=$PROJECTSDIR
 
 if [[ -e $HOME/.dotfiles_location ]]; then
@@ -20,6 +21,12 @@ alias gi="gem install"
 alias r="rails"
 alias vi="vim"
 alias e="vim"
+
+if which hub > /dev/null; then alias git="hub"; fi
+
+proj() {
+  cd $PROJDIR/$1
+}
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="sammy"
