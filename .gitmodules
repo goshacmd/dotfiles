@@ -4,3 +4,6 @@
 [submodule "janus/surround"]
   path = janus/surround
   url = https://github.com/tpope/vim-surround.git
+[submodule "janus/vim-less"]
+	path = janus/vim-less
+	url = https://github.com/groenewege/vim-less.git

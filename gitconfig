@@ -4,7 +4,7 @@
   excludesfile = ~/.gitignore
 
 [user]
-  name = Gosha Arinich
+	name = Gosha Arinich
   email = me@goshakkk.name
 
 [github]
