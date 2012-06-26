@@ -61,6 +61,8 @@ precmd() {
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+
 # Rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
