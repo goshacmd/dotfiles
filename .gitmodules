@@ -7,3 +7,6 @@
 [submodule "janus/vim-less"]
 	path = janus/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "janus/vim-clojure"]
+	path = janus/vim-clojure
+	url = git://github.com/vim-scripts/VimClojure.git
