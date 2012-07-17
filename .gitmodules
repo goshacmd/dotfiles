@@ -10,3 +10,6 @@
 [submodule "janus/vim-clojure"]
 	path = janus/vim-clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "janus/vim-slim"]
+	path = janus/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
