@@ -12,3 +12,6 @@ tags
 Session.vim
 *.o
 *.bak
+.powrc
+.powenv
+.powder
