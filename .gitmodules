@@ -16,3 +16,6 @@
 [submodule "janus/vim-scala"]
 	path = janus/vim-scala
 	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "janus/vim-handlebars"]
+	path = janus/vim-handlebars
+	url = https://github.com/nono/vim-handlebars.git
