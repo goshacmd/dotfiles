@@ -19,3 +19,6 @@
 [submodule "janus/vim-handlebars"]
 	path = janus/vim-handlebars
 	url = https://github.com/nono/vim-handlebars.git
+[submodule "janus/vim-html5"]
+	path = janus/vim-html5
+	url = git://github.com/othree/html5.vim.git
