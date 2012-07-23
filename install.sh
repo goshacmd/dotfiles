@@ -11,6 +11,7 @@ link gitconfig
 link gitignore
 link ctags
 link vimrc.before
+link vimrc.after
 link gvimrc.after
 link janus
 link gemrc
