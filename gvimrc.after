@@ -4,6 +4,6 @@ set go-=T
 set guioptions=aAce
 
 set transparency=10 "" Requires an experimental renderer
-set guifont=Inconsolata\ for\ Powerline:h17
+set guifont=Inconsolata:h14
 
 colorscheme solarized
