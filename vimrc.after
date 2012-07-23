@@ -1,1 +1,4 @@
+colorscheme solarized
+
+" Fix NERDTree colors
 hi Directory ctermfg=grey

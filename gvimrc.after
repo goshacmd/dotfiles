@@ -5,5 +5,3 @@ set guioptions=aAce
 
 set transparency=10 "" Requires an experimental renderer
 set guifont=Inconsolata:h14
-
-colorscheme solarized

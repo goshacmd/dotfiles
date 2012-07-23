@@ -1,2 +1,3 @@
 let mapleader = ","
 let g:Powerline_symbols = 'fancy'
+let g:solarized_termtrans = 1
