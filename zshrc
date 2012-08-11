@@ -41,7 +41,7 @@ ZSH_THEME="sammy"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 plugins=(git brew bundler gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
 
@@ -49,15 +49,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Disable fucking autocorrect
 unsetopt correct_all
-
-update_terminal_cwd() {
-  printf '\e]7;%s\a' "file://$HOST$(pwd | sed -e 's/ /%20/g')"
-}
-
-precmd() {
-  update_terminal_cwd
-  return 0;
-}
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 export PATH=$HOME/.cljr/bin:$PATH
