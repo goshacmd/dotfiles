@@ -61,3 +61,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [[ -e $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
 fi
+
+[[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null
