@@ -5,6 +5,10 @@ export PROJECTSDIR=$HOME/Projects
 export PROJDIR=$PROJECTSDIR
 export CODEDIR=$PROJECTSDIR
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 if [[ -e $HOME/.dotfiles_location ]]; then
   export DOTFILES=$(cat $HOME/.dotfiles_location)
 else
