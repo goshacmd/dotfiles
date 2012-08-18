@@ -10,6 +10,7 @@ link zshrc
 link gitconfig
 link gitignore
 link ctags
+link tmux.conf
 link vimrc.before
 link vimrc.after
 link gvimrc.after
