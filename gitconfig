@@ -19,6 +19,8 @@
   st = status
   s = status -s
   ci = commit --all
+  di = diff
+  dc = diff --cached
   co = checkout
   nb = checkout -b
   br = branch --verbose
