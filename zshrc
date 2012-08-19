@@ -1,5 +1,5 @@
 # Setting vars
-export EDITOR="mvim -f"
+export EDITOR="vim -f"
 export VISUAL=$EDITOR
 export PROJECTSDIR=$HOME/Projects
 export PROJDIR=$PROJECTSDIR
