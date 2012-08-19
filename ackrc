@@ -16,3 +16,4 @@
 --type-set=clojure=clj,cljs
 --type-set=markdown=markdown,mdown,mkdn,mkd,md
 --type-set=rdoc=rdoc
+--type-set=ronn=ronn,ron
