@@ -22,8 +22,11 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Aliases
+alias o="open"
+alias br="brew"
 alias b="bundle"
 alias be="bundle exec"
+alias bu="bundle update"
 alias ci="git commit -am"
 alias g="git"
 alias gi="gem install"
@@ -31,6 +34,14 @@ alias r="rails"
 alias vi="vim"
 alias e="vim"
 alias c="clear"
+alias lu="lunchy"
+alias f="foreman"
+alias fs="foreman start"
+alias fr="foreman run"
+alias tm="tmux"
+alias tma="tmux attach"
+alias tmn="tmux new"
+alias tmn="tmux ls"
 
 if which hub > /dev/null; then alias git="hub"; fi
 
