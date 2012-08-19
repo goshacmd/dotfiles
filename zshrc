@@ -1,13 +1,6 @@
-# Setting vars
-export EDITOR="vim -f"
-export VISUAL=$EDITOR
 export PROJECTSDIR=$HOME/Projects
 export PROJDIR=$PROJECTSDIR
 export CODEDIR=$PROJECTSDIR
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
 
 if [[ -e $HOME/.dotfiles_location ]]; then
   export DOTFILES=$(cat $HOME/.dotfiles_location)
@@ -15,6 +8,18 @@ else
   export DOTFILES=$CODEDIR/dotfiles
   echo "~/.dotfiles_location not found, reinstall dotfiles"
 fi
+
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="sammy"
+
+DISABLE_AUTO_TITLE="true"
+
+plugins=(git brew bundler gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# Disable fucking autocorrect
+unsetopt correct_all
 
 # Aliases
 alias b="bundle"
@@ -25,45 +30,41 @@ alias gi="gem install"
 alias r="rails"
 alias vi="vim"
 alias e="vim"
+alias c="clear"
 
 if which hub > /dev/null; then alias git="hub"; fi
 
-proj() {
-  cd $PROJDIR/$1
-}
+# Env vars
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="sammy"
+export EDITOR="vim -f"
+export VISUAL=$EDITOR
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=$DOTFILES/bin:$PATH
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+if [[ -e $HOME/.cljr/bin ]]; then
+  export PATH=$HOME/.cljr/bin:$PATH
+fi
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-DISABLE_AUTO_TITLE="true"
-
-plugins=(git brew bundler gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-# Disable fucking autocorrect
-unsetopt correct_all
-
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
-export PATH=$HOME/.cljr/bin:$PATH
-
-export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+if [[ -e /usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar ]]; then
+  export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+fi
 
 # Rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-if [[ -e $HOME/.zshrc.local ]]; then
-  source $HOME/.zshrc.local
-fi
+# Local settings
+if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 
+#   ___________________________
+#  < fortune | cowsay | lolcat >
+#   ---------------------------
+#          \   ^__^
+#           \  (oo)\_______
+#              (__)\       )\/\
+#                  ||----w |
+#                  ||     ||
 [[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null
