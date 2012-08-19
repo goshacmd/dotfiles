@@ -1,5 +1,5 @@
 [core]
-  editor = mvim -f
+  editor = vim -f
   quotepath = false
   excludesfile = ~/.gitignore
 
