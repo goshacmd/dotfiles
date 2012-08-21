@@ -41,7 +41,7 @@ alias fr="foreman run"
 alias tm="tmux"
 alias tma="tmux attach"
 alias tmn="tmux new"
-alias tmn="tmux ls"
+alias tml="tmux ls"
 
 if which hub > /dev/null; then alias git="hub"; fi
 
