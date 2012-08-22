@@ -25,3 +25,6 @@
 [submodule "janus/vim-ruby"]
 	path = janus/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "janus/vim-elixir"]
+	path = janus/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
