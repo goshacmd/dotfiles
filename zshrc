@@ -79,3 +79,6 @@ if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 #                  ||----w |
 #                  ||     ||
 [[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
