@@ -25,3 +25,6 @@
   nb = checkout -b
   br = branch --verbose
   forget = rm --cached
+
+[push]
+  default = simple
