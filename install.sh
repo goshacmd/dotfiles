@@ -17,5 +17,6 @@ link vimrc.after
 link gvimrc.after
 link janus
 link gemrc
+link slate
 
 echo "Installed dotfiles!"

@@ -1,0 +1,60 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config windowHintsIgnoreHiddenWindows false
+config windowHintsShowIcons true
+config windowHintsSpread true
+
+# Monitor aliases
+alias mon-laptop      1440x900
+alias mon-thunderbolt 2560x1440
+
+# 1 monitor layout (laptop only)
+# TODO
+
+# 1 monitor layout (Thunderbolt Display only)
+# TODO
+
+# 2 monitor layout
+# TODO
+
+# Default layouts
+# TODO
+
+# Resize bindings
+#bind right:alt      resize +10% +0
+#bind  left:alt      resize -10% +0
+#bind    up:alt      resize +0   -10%
+#bind  down:alt      resize +0   +10%
+#bind right:ctrl;alt resize -10% +0 bottom-right
+#bind  left:ctrl;alt resize +10% +0 bottom-right
+#bind    up:ctrl;alt resize +0   +10% bottom-right
+#bind  down:ctrl;alt resize +0   -10% bottom-right
+
+# Push bindings
+alias pushkeys ctrl;cmd
+bind     /:${pushkeys} move screenSizeX/4;0  screenSizeX/4*2;screenSizeY # center
+bind     n:${pushkeys} move screenSizeX/8;0  screenSizeX/8*6;screenSizeY # normal
+bind     h:${pushkeys} move screenSizeX/-4;0 screenSizeX*2;screenSizeY   # huge
+bind right:${pushkeys} push right bar-resize:screenSizeX/3
+bind  left:${pushkeys} push left  bar-resize:screenSizeX/3
+bind  down:${pushkeys} push down  bar-resize:screenSizeY/2
+bind    up:${pushkeys} push up    bar-resize:screenSizeY/2
+
+# Nudge bindings
+alias nudgekeys ctrl;alt;cmd
+bind right:${nudgekeys} nudge +5% +0
+bind  left:${nudgekeys} nudge -5% +0
+bind  down:${nudgekeys} nudge +0  +5%
+bind    up:${nudgekeys} nudge +0  -5%
+
+# Focus bindings
+# TODO
+
+# Window hints
+bind esc:cmd hint
+
+# Grid
+bind esc:ctrl grid
