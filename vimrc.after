@@ -2,3 +2,23 @@ colorscheme solarized
 
 " Fix NERDTree colors
 hi Directory ctermfg=grey
+
+" Mappings
+" Yank & paste via OS X clipboard
+map <leader>p "*p
+map <leader>y "*y
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+" Resizing splits
+nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> <leader>> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+nnoremap <silent> <leader>< :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+" No arrow keys
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
+map <down> <nop>
