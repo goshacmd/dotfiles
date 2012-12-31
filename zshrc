@@ -14,7 +14,7 @@ ZSH_THEME="sammy"
 
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git brew bundler gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
+plugins=(git brew gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
