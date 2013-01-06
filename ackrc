@@ -2,7 +2,6 @@
 --follow
 --group
 --sort-files
---ignore-case
 --smart-case
 --ignore-dir=log
 --ignore-dir=doc
