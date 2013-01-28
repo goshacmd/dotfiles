@@ -28,3 +28,6 @@
 [submodule "janus/vim-elixir"]
 	path = janus/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "janus/base16"]
+	path = janus/base16
+	url = git://github.com/chriskempson/base16-vim.git

@@ -1,4 +1,5 @@
-colorscheme Tomorrow-Night
+set background=dark
+colorscheme base16-default
 
 " Mappings
 " Yank & paste via OS X clipboard
