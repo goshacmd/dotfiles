@@ -32,8 +32,6 @@ alias tma="tmux attach"
 alias tmn="tmux new"
 alias tml="tmux ls"
 
-if which hub > /dev/null; then alias git="hub"; fi
-
 # Env vars
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
