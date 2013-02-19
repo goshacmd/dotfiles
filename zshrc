@@ -1,14 +1,3 @@
-export PROJECTSDIR=$HOME/Projects
-export PROJDIR=$PROJECTSDIR
-export CODEDIR=$PROJECTSDIR
-
-if [[ -e $HOME/.dotfiles_location ]]; then
-  export DOTFILES=$(cat $HOME/.dotfiles_location)
-else
-  export DOTFILES=$CODEDIR/dotfiles
-  echo "~/.dotfiles_location not found, reinstall dotfiles"
-fi
-
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="sammy"
 
@@ -53,20 +42,6 @@ export LANGUAGE=en_US.UTF-8
 export EDITOR="vim -f"
 export VISUAL=$EDITOR
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH=$DOTFILES/bin:$PATH
-
-if [[ -e $HOME/.cljr/bin ]]; then
-  export PATH=$HOME/.cljr/bin:$PATH
-fi
-
-if [[ -e /usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar ]]; then
-  export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
-fi
-
-# Rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # Local settings
 if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 
@@ -79,6 +54,3 @@ if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 #                  ||----w |
 #                  ||     ||
 [[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
