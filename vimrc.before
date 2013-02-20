@@ -1,4 +1,5 @@
 set noswapfile backup undofile undoreload=5000 history=5000
+set undodir=~/vim/_undo/,.
 set mouse=a
 
 let mapleader = ","
