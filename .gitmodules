@@ -7,3 +7,6 @@
 [submodule "janus/base16"]
 	path = janus/base16
 	url = git://github.com/chriskempson/base16-vim.git
+[submodule "janus/vim-fireplace"]
+	path = janus/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
