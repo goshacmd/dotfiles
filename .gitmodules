@@ -1,30 +1,9 @@
 [submodule "janus/powerline"]
   path = janus/powerline
   url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "janus/surround"]
-  path = janus/surround
-  url = https://github.com/tpope/vim-surround.git
-[submodule "janus/vim-less"]
-	path = janus/vim-less
-	url = https://github.com/groenewege/vim-less.git
-[submodule "janus/vim-clojure"]
-	path = janus/vim-clojure
-	url = git://github.com/vim-scripts/VimClojure.git
-[submodule "janus/vim-scala"]
-	path = janus/vim-scala
-	url = git://github.com/derekwyatt/vim-scala.git
-[submodule "janus/vim-handlebars"]
-	path = janus/vim-handlebars
-	url = https://github.com/nono/vim-handlebars.git
 [submodule "janus/vim-html5"]
 	path = janus/vim-html5
 	url = git://github.com/othree/html5.vim.git
-[submodule "janus/vim-ruby"]
-	path = janus/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
-[submodule "janus/vim-elixir"]
-	path = janus/vim-elixir
-	url = https://github.com/elixir-lang/vim-elixir.git
 [submodule "janus/base16"]
 	path = janus/base16
 	url = git://github.com/chriskempson/base16-vim.git
