@@ -10,3 +10,6 @@
 [submodule "janus/vim-fireplace"]
 	path = janus/vim-fireplace
 	url = git://github.com/tpope/vim-fireplace.git
+[submodule "janus/tbone"]
+	path = janus/tbone
+	url = git://github.com/tpope/vim-tbone.git
