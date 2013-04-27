@@ -69,7 +69,7 @@ alias pushkeys ctrl;cmd
 bind     /:${pushkeys} move screenSizeX/4;0  screenSizeX/4*2;screenSizeY # center
 bind     n:${pushkeys} move screenSizeX/8;0  screenSizeX/8*6;screenSizeY # normal
 bind     h:${pushkeys} move screenSizeX/-4;0 screenSizeX*2;screenSizeY   # huge
-bind     f:${pushkeys} move 0;0 screenSizeX;screenSizeY # full-screen
+bind     r:${pushkeys} move 0;0 screenSizeX;screenSizeY # full-screen
 bind right:${pushkeys} push right bar-resize:screenSizeX/3
 bind  left:${pushkeys} push left  bar-resize:screenSizeX/3
 bind  down:${pushkeys} push down  bar-resize:screenSizeY/2
