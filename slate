@@ -55,10 +55,10 @@ bind l:ctrl;cmd layout laptop
 bind t:ctrl;cmd layout thunderbolt
 
 # Resize bindings
-bind right:alt      resize +10% +0
-bind  left:alt      resize -10% +0
-bind    up:alt      resize +0   -10%
-bind  down:alt      resize +0   +10%
+bind right:cmd;alt  resize +10% +0
+bind  left:cmd;alt  resize -10% +0
+bind    up:cmd;alt  resize +0   -10%
+bind  down:cmd;alt  resize +0   +10%
 bind right:ctrl;alt resize -10% +0 bottom-right
 bind  left:ctrl;alt resize +10% +0 bottom-right
 bind    up:ctrl;alt resize +0   +10% bottom-right
