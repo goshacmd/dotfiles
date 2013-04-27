@@ -24,20 +24,21 @@ alias mon-thunderbolt 2560x1440
 # TODO
 
 # Resize bindings
-#bind right:alt      resize +10% +0
-#bind  left:alt      resize -10% +0
-#bind    up:alt      resize +0   -10%
-#bind  down:alt      resize +0   +10%
-#bind right:ctrl;alt resize -10% +0 bottom-right
-#bind  left:ctrl;alt resize +10% +0 bottom-right
-#bind    up:ctrl;alt resize +0   +10% bottom-right
-#bind  down:ctrl;alt resize +0   -10% bottom-right
+bind right:alt      resize +10% +0
+bind  left:alt      resize -10% +0
+bind    up:alt      resize +0   -10%
+bind  down:alt      resize +0   +10%
+bind right:ctrl;alt resize -10% +0 bottom-right
+bind  left:ctrl;alt resize +10% +0 bottom-right
+bind    up:ctrl;alt resize +0   +10% bottom-right
+bind  down:ctrl;alt resize +0   -10% bottom-right
 
 # Push bindings
 alias pushkeys ctrl;cmd
 bind     /:${pushkeys} move screenSizeX/4;0  screenSizeX/4*2;screenSizeY # center
 bind     n:${pushkeys} move screenSizeX/8;0  screenSizeX/8*6;screenSizeY # normal
 bind     h:${pushkeys} move screenSizeX/-4;0 screenSizeX*2;screenSizeY   # huge
+bind     f:${pushkeys} move 0;0 screenSizeX;screenSizeY # full-screen
 bind right:${pushkeys} push right bar-resize:screenSizeX/3
 bind  left:${pushkeys} push left  bar-resize:screenSizeX/3
 bind  down:${pushkeys} push down  bar-resize:screenSizeY/2
@@ -51,7 +52,15 @@ bind  down:${nudgekeys} nudge +0  +5%
 bind    up:${nudgekeys} nudge +0  -5%
 
 # Focus bindings
-# TODO
+alias focuskeys ctrl;shift;alt;cmd
+bind s:${focuskeys} focus 'Safari'
+bind t:${focuskeys} focus 'iTerm'
+bind m:${focuskeys} focus 'Messages'
+bind t:${focuskeys} focus 'Tweetbot'
+bind w:${focuskeys} focus 'Wedge'
+bind p:${focuskeys} focus 'Sparrow'
+bind c:${focuskeys} focus 'Google Chrome'
+bind f:${focuskeys} focus 'Finder'
 
 # Window hints
 bind esc:cmd hint
