@@ -100,6 +100,7 @@ var layoutKeys = "ctrl;cmd",
     resizeKeys1 = "cmd;alt",
     resizeKeys2 = "ctrl;alt",
     pushKeys = "ctrl;cmd",
+    throwKeys = "ctrl;alt",
     nudgeKeys = "ctrl;alt;cmd",
     focusKeys = "ctrl;shift;alt;cmd";
 
@@ -153,6 +154,12 @@ var rawBindings = {
   "left:  #nudgeKeys": S.op("nudge", { x: "-5%", y: "+0" }),
   "down:  #nudgeKeys": S.op("nudge", { x: "+0", y: "+5%" }),
   "up:    #nudgeKeys": S.op("nudge", { x: "+0", y: "-5%" }),
+
+  // Throw bindings
+  "1:#throwKeys": S.op("throw", { screen: monLaptop, width: "screenSizeX", height: "screenSizeY" }), // throw to Air screen & make full-screen
+  "2:#throwKeys": S.op("throw", { screen: monTbolt, width: "screenSizeX", height: "screenSizeY" }), // throw to TD & make full-screen
+  "3:#throwKeys": S.op("throw", { screen: monLaptop }), // throw to Air screen but preserve window size
+  "4:#throwKeys": S.op("throw", { screen: monTbolt }), // throw to TD but preserve window size
 
   // Focus bindings
   "s:#focusKeys": S.op("focus", { app: "Safari" }),
