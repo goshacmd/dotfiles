@@ -131,6 +131,7 @@ var laptop = S.op("layout", { name: laptopLayout }),
 
 // Binding prefixes
 var layoutKeys = "ctrl;cmd",
+    locationKeys = "ctrl;cmd",
     resizeKeys1 = "cmd;alt",
     resizeKeys2 = "ctrl;alt",
     pushKeys = "ctrl;cmd",
@@ -150,6 +151,18 @@ var rawBindings = {
   "l:#layoutKeys": laptop,
   "t:#layoutKeys": thunderbolt,
   "b:#layoutKeys": twoMonitor,
+
+  // Location bindings
+  "0:#locationKeys": lapChat,
+  "[:#locationKeys": lapSocial,
+  ";:#locationKeys": lapFull,
+  "1:#locationKeys": tboltFull,
+  "2:#locationKeys": tboltKindaFull,
+  "3:#locationKeys": tboltLeft,
+  "4:#locationKeys": tboltRight,
+  "5:#locationKeys": tboltChat,
+  "6:#locationKeys": tboltSocialTop,
+  "7:#locationKeys": tboltSocialBot,
 
   // Resize bindings
   "right: #resizeKeys1": S.op("resize", { width: "+10%", height: "+0" }),
