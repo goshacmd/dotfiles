@@ -1,3 +1,38 @@
+// Utils
+var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); }
+
+/*
+ * Bind all mappings.
+ *
+ * prefixMap - an optional object of key prefix mappings.
+ * bindMap   - an object of key -> operation mappings.
+ *
+ * In Slate config (non-JS), you can just "bind a:${someprefix} relaunch".
+ * In JS version of config, however, you cannot, because you can't use
+ * expressions in the key part of object literal in JS, it becomes rather
+ * cumbersome to repeat same prefix in every mapping. To address these
+ * issues, you can pass an object of prefix mappings to `bindAll` along
+ * with the bind mappings. In bind mappings then, you can use hash symbol
+ * and name of your prefix as a placeholder.
+ */
+var bindAll= function(prefixMap, _bindMap) {
+  bindMap = {};
+
+  for(key in _bindMap) {
+    var match, newKey = key;
+
+    if (match = key.match(/.*:\s*#(.*)/)) {
+      var val = prefixMap[match[1]];
+      newKey = key.replace("#" + match[1], val).replace(/\s+/, '');
+    }
+
+    bindMap[newKey] = _bindMap[key];
+  };
+
+  // Bind it, finally.
+  S.bnda(bindMap);
+};
+
 // Configs
 S.cfga({
   defaultToCurrentScreen: true,
@@ -36,8 +71,6 @@ var tboltRight = S.op("move", {
   width: "5*screenSizeX/12",
   height: "screenSizeY"
 });
-
-var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); }
 
 var lapFullHash = {
   operations: [lapFull],
@@ -94,25 +127,18 @@ var laptop = S.op("layout", { name: laptopLayout }),
     thunderbolt = S.op("layout", { name: thunderboltLayout }),
     twoMonitor = S.op("layout", { name: twoMonitorLayout });
 
-// Binding prefixes
-var layoutKeys = "ctrl;cmd",
-    locationKeys = "ctrl;cmd",
-    resizeKeys1 = "cmd;alt",
-    resizeKeys2 = "ctrl;alt",
-    pushKeys = "ctrl;cmd",
-    throwKeys = "ctrl;alt",
-    nudgeKeys = "ctrl;alt;cmd",
-    focusKeys = "ctrl;shift;alt;cmd";
-
 // Bind everything
-
-/*
- * Note: Expressions are not allowed in the key part of object literal
- * (e.g. `{ "up:" + resizeKeys1 : ... }` would fail), so I'm using
- * "#somethingKeys" in the key, and later replace it with the value of
- * the variable 'somethingKeys'. Works with anything instead of "something".
- */
-var rawBindings = {
+bindAll({
+  // Binding prefixes
+  layoutKeys: "ctrl;cmd",
+  locationKeys: "ctrl;cmd",
+  resizeKeys1: "cmd;alt",
+  resizeKeys2: "ctrl;alt",
+  pushKeys: "ctrl;cmd",
+  throwKeys: "ctrl;alt",
+  nudgeKeys: "ctrl;alt;cmd",
+  focusKeys: "ctrl;shift;alt;cmd"
+}, {
   // Layout bindings
   "l:#layoutKeys": laptop,
   "t:#layoutKeys": thunderbolt,
@@ -179,21 +205,4 @@ var rawBindings = {
   "esc:ctrl;alt": S.op("relaunch"),
   "1:ctrl": S.op("undo"),
   "2:ctrl": S.op("switch")
-};
-
-var bindings = {};
-
-// Replace "#somethingKeys" in binding keys with the value of 'somethingKeys'.
-_.each(rawBindings, function(value, key) {
-  var match, val;
-
-  if (match = key.match(/.*:\s*#(.*Keys.*)/)) {
-    val = eval(match[1]);
-    key = key.replace("#" + match[1], val).replace(/\s+/, '');
-  }
-
-  bindings[key] = value;
 });
-
-// Bind it, finally.
-S.bnda(bindings);
