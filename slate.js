@@ -13,20 +13,6 @@ var monLaptop = "1440x900",
     monTbolt =  "2560x1440";
 
 // Operations
-var lapChat = S.op("corner", {
-  screen: monLaptop,
-  direction: "top-left",
-  width: "screenSizeX/2",
-  height: "screenSizeY"
-});
-
-var lapSocial = S.op("corner", {
-  screen: monLaptop,
-  direction: "top-right",
-  width: "screenSizeX/3",
-  height: "screenSizeY"
-});
-
 var lapFull = S.op("corner", {
   screen: monLaptop,
   direction: "top-left",
@@ -34,41 +20,20 @@ var lapFull = S.op("corner", {
   height: "screenSizeY"
 });
 
-var tboltFull = lapFull.dup({ screen: monTbolt });
+var lapChat = lapFull.dup({ width: "screenSizeX/2" }),
+    lapSocial = lapChat.dup({ direction: "top-right", width: "screenSizeX/3" });
 
-var tboltKindaFull = S.op("move", {
-  screen: monTbolt,
-  x: "screenOriginX",
-  y: "screenOriginY",
-  width: "5*screenSizeX/6",
-  height: "screenSizeY"
-});
+var tboltFull = lapFull.dup({ screen: monTbolt }),
+    tboltKindaFull = tboltFull.dup({ width: "5*screenSizeX/6" }),
+    tboltLeft = tboltFull.dup({ width: "5*screenSizeX/12" }),
+    tboltChat = tboltFull.dup({ width: "screenSizeX/6" })
+    tboltSocialTop = tboltChat.dup({ direction: "top-right", height: "screenSizeY/2" }),
+    tboltSocialBot = tboltSocialTop.dup({ direction: "bottom-right" });
 
-var tboltLeft = S.op("corner", {
-  screen: monTbolt,
-  direction: "top-left",
-  width: "5*screenSizeX/12",
-  height: "screenSizeY"
-});
-
-var tboltRight = tboltKindaFull.dup({
+var tboltRight = S.op("move", {
   x: "screenOriginX+5*screenSizeX/12",
-  width: "5*screenSizeX/12"
-});
-
-var tboltSocialTop = S.op("corner", {
-  screen: monTbolt,
-  direction: "top-right",
-  width: "screenSizeX/6",
-  height: "screenSizeY/2"
-});
-
-var tboltSocialBot = tboltSocialTop.dup({ direction: "bottom-right" });
-
-var tboltChat = S.op("corner", {
-  screen: monTbolt,
-  direction: "top-left",
-  width: "screenSizeX/6",
+  y: "screenOriginY",
+  width: "5*screenSizeX/12",
   height: "screenSizeY"
 });
 
