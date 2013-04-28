@@ -166,17 +166,12 @@ var rawBindings = {
   "c:#focusKeys": S.op("focus", { app: "Google Chrome" }),
   "f:#focusKeys": S.op("focus", { app: "Finder" }),
 
-  // Window hints
-  "esc:cmd": S.op("hint"),
-
-  // Grid
+  // Etc
+  "esc:cmd": S.op("hint"), // window hints
   "esc:ctrl": S.op("grid"),
-
-  // Relaunch
   "esc:ctrl;alt": S.op("relaunch"),
-
-  // Undo
-  "1:ctrl": S.op("undo")
+  "1:ctrl": S.op("undo"),
+  "2:ctrl": S.op("switch")
 };
 
 var bindings = {};
