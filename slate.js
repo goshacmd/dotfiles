@@ -72,24 +72,24 @@ var tboltChat = S.op("corner", {
   height: "screenSizeY"
 });
 
+var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); }
+
 var lapFullHash = {
   operations: [lapFull],
   "ignore-fail": true,
   repeat: true
 };
 
-var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); }
+var lapChatHash = extend(lapFullHash, { operations: [lapChat] }),
+    lapSocialHash = extend(lapFullHash, { operations: [lapSocial] });
 
-var lapChatHash = extend(lapFullHash, { operations: [lapChat] });
-var lapSocialHash = extend(lapFullHash, { operations: [lapSocial] });
-
-var tboltFullHash = extend(lapFullHash, { operations: [tboltFull] });
-var tboltKindaFullHash = extend(tboltFullHash, { operations: [tboltKindaFull] });
-var tboltLeftHash = extend(tboltFullHash, { operations: [tboltLeft] });
-var tboltRightHash = extend(tboltFullHash, { operations: [tboltRight] });
-var tboltSocialTopHash = extend(tboltFullHash, { operations: [tboltSocialTop] });
-var tboltSocialBotHash = extend(tboltFullHash, { operations: [tboltSocialBot] });
-var tboltChatHash = extend(tboltFullHash, { operations: [tboltChat] });
+var tboltFullHash = extend(lapFullHash, { operations: [tboltFull] }),
+    tboltKindaFullHash = extend(tboltFullHash, { operations: [tboltKindaFull] }),
+    tboltLeftHash = extend(tboltFullHash, { operations: [tboltLeft] }),
+    tboltRightHash = extend(tboltFullHash, { operations: [tboltRight] }),
+    tboltSocialTopHash = extend(tboltFullHash, { operations: [tboltSocialTop] }),
+    tboltSocialBotHash = extend(tboltFullHash, { operations: [tboltSocialBot] }),
+    tboltChatHash = extend(tboltFullHash, { operations: [tboltChat] });
 
 // 1 monitor layout (laptop only)
 var laptopLayout = S.lay("laptop", {
@@ -125,9 +125,9 @@ S.def([monTbolt], thunderboltLayout);
 S.def([monTbolt, monLaptop], twoMonitorLayout);
 
 // Layout operations
-var laptop = S.op("layout", { name: laptopLayout });
-var thunderbolt = S.op("layout", { name: thunderboltLayout });
-var twoMonitor = S.op("layout", { name: twoMonitorLayout });
+var laptop = S.op("layout", { name: laptopLayout }),
+    thunderbolt = S.op("layout", { name: thunderboltLayout }),
+    twoMonitor = S.op("layout", { name: twoMonitorLayout });
 
 // Binding prefixes
 var layoutKeys = "ctrl;cmd",
@@ -138,6 +138,13 @@ var layoutKeys = "ctrl;cmd",
     focusKeys = "ctrl;shift;alt;cmd";
 
 // Bind everything
+
+/*
+ * Note: Expressions are not allowed in the key part of object literal
+ * (e.g. `{ "up:" + resizeKeys1 : ... }` would fail), so I'm using
+ * "#somethingKeys" in the key, and later replace it with the value of
+ * the variable 'somethingKeys'. Works with anything instead of "something".
+ */
 var rawBindings = {
   // Layout bindings
   "l:#layoutKeys": laptop,
@@ -193,6 +200,7 @@ var rawBindings = {
 
 var bindings = {};
 
+// Replace "#somethingKeys" in binding keys with the value of 'somethingKeys'.
 _.each(rawBindings, function(value, key) {
   var match, val;
 
@@ -204,4 +212,5 @@ _.each(rawBindings, function(value, key) {
   bindings[key] = value;
 });
 
+// Bind it, finally.
 S.bnda(bindings);
