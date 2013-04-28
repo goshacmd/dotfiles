@@ -173,7 +173,10 @@ var rawBindings = {
   "esc:ctrl": S.op("grid"),
 
   // Relaunch
-  "esc:ctrl;alt": S.op("relaunch")
+  "esc:ctrl;alt": S.op("relaunch"),
+
+  // Undo
+  "1:ctrl": S.op("undo")
 };
 
 var bindings = {};
