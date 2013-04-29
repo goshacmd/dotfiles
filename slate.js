@@ -59,13 +59,15 @@ var lapChat = lapFull.dup({ width: "screenSizeX/2" }),
     lapSocial = lapChat.dup({ direction: "top-right", width: "screenSizeX/3" });
 
 var tboltFull = lapFull.dup({ screen: monTbolt }),
+    tboltLeft = tboltFull.dup({ width: "screenSizeX/2" }),
+    tboltRight = tboltLeft.dup({ direction: "top-right" }),
     tboltKindaFull = tboltFull.dup({ width: "5*screenSizeX/6" }),
-    tboltLeft = tboltFull.dup({ width: "5*screenSizeX/12" }),
+    tboltKindaLeft = tboltFull.dup({ width: "5*screenSizeX/12" }),
     tboltChat = tboltFull.dup({ width: "screenSizeX/6" })
     tboltSocialTop = tboltChat.dup({ direction: "top-right", height: "screenSizeY/2" }),
     tboltSocialBot = tboltSocialTop.dup({ direction: "bottom-right" });
 
-var tboltRight = S.op("move", {
+var tboltKindaRight = S.op("move", {
   x: "screenOriginX+5*screenSizeX/12",
   y: "screenOriginY",
   width: "5*screenSizeX/12",
@@ -82,9 +84,11 @@ var lapChatHash = extend(lapFullHash, { operations: [lapChat] }),
     lapSocialHash = extend(lapFullHash, { operations: [lapSocial] });
 
 var tboltFullHash = extend(lapFullHash, { operations: [tboltFull] }),
-    tboltKindaFullHash = extend(tboltFullHash, { operations: [tboltKindaFull] }),
     tboltLeftHash = extend(tboltFullHash, { operations: [tboltLeft] }),
     tboltRightHash = extend(tboltFullHash, { operations: [tboltRight] }),
+    tboltKindaFullHash = extend(tboltFullHash, { operations: [tboltKindaFull] }),
+    tboltKindaLeftHash = extend(tboltFullHash, { operations: [tboltKindaLeft] }),
+    tboltKindaRightHash = extend(tboltFullHash, { operations: [tboltKindaRight] }),
     tboltSocialTopHash = extend(tboltFullHash, { operations: [tboltSocialTop] }),
     tboltSocialBotHash = extend(tboltFullHash, { operations: [tboltSocialBot] }),
     tboltChatHash = extend(tboltFullHash, { operations: [tboltChat] });
@@ -105,8 +109,8 @@ var laptopLayout = S.lay("laptop", {
 
 // 1 monitor layout (Thunderbolt Display only)
 var thunderboltLayout = S.lay("thunderbolt", {
-  "Safari": tboltLeftHash,
-  "iTerm": tboltRightHash,
+  "Safari": tboltKindaLeftHash,
+  "iTerm": tboltKindaRightHash,
   "Tweetbot": tboltSocialTopHash,
   "Wedge": tboltSocialBotHash,
   "Messages": tboltChatHash,
@@ -151,10 +155,12 @@ bindAll({
   "1:#locationKeys": tboltFull,
   "2:#locationKeys": tboltKindaFull,
   "3:#locationKeys": tboltLeft,
-  "4:#locationKeys": tboltRight,
-  "5:#locationKeys": tboltChat,
-  "6:#locationKeys": tboltSocialTop,
-  "7:#locationKeys": tboltSocialBot,
+  "4:#locationKeys": tboltKindaLeft,
+  "5:#locationKeys": tboltRight,
+  "6:#locationKeys": tboltKindaRight,
+  "7:#locationKeys": tboltChat,
+  "8:#locationKeys": tboltSocialTop,
+  "9:#locationKeys": tboltSocialBot,
 
   // Resize bindings
   "right: #resizeKeys1": S.op("resize", { width: "+10%", height: "+0" }),
