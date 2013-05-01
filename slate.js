@@ -1,5 +1,6 @@
 // Utils
-var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); }
+//
+var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); };
 
 /*
  * Bind all mappings.
@@ -31,6 +32,36 @@ var bindAll= function(prefixMap, _bindMap) {
 
   // Bind it, finally.
   S.bnda(bindMap);
+};
+
+var screenDimension = function(screen) {
+  var rect = screen.rect();
+
+  return "" + rect.width + "x" + rect.height;
+};
+
+/*
+ * Return the command appropriate for the current display.
+ *
+ * lapCmd   - the function to run when the laptop display is active.
+ * tboltCmd - the function to run when TD is active.
+ * bothCMD  - (optional) the function to run when both laptop & TD are active.
+ */
+var lapAndTbolt = function(lapCmd, tboltCmd, bothCmd) {
+  return function() {
+    var screenCount = S.screenCount(),
+        screen = S.screen(),
+        dimension = screenDimension(screen);
+
+    if (screenCount == 1) {
+      switch (dimension) {
+        case monLaptop: return lapCmd.run();
+        case monTbolt: return tboltCmd.run();
+      }
+    } else if (screenCount == 2 && bothCmd !== undefined) {
+      bothCmd.run();
+    }
+  };
 };
 
 // Configs
@@ -129,7 +160,8 @@ S.def([monTbolt, monLaptop], twoMonitorLayout);
 // Layout operations
 var laptop = S.op("layout", { name: laptopLayout }),
     thunderbolt = S.op("layout", { name: thunderboltLayout }),
-    twoMonitor = S.op("layout", { name: twoMonitorLayout });
+    twoMonitor = S.op("layout", { name: twoMonitorLayout }),
+    universalLayout = lapAndTbolt(laptop, thunderbolt, twoMonitor);
 
 // Bind everything
 bindAll({
@@ -147,20 +179,21 @@ bindAll({
   "l:#layoutKeys": laptop,
   "t:#layoutKeys": thunderbolt,
   "b:#layoutKeys": twoMonitor,
+  "u:#layoutKeys": universalLayout,
 
   // Location bindings
   "0:#locationKeys": lapChat,
   "[:#locationKeys": lapSocial,
   ";:#locationKeys": lapFull,
-  "1:#locationKeys": tboltFull,
+  "1:#locationKeys": lapAndTbolt(lapFull, tboltFull),
   "2:#locationKeys": tboltKindaFull,
   "3:#locationKeys": tboltLeft,
   "4:#locationKeys": tboltKindaLeft,
   "5:#locationKeys": tboltRight,
   "6:#locationKeys": tboltKindaRight,
-  "7:#locationKeys": tboltChat,
-  "8:#locationKeys": tboltSocialTop,
-  "9:#locationKeys": tboltSocialBot,
+  "7:#locationKeys": lapAndTbolt(lapChat, tboltChat),
+  "8:#locationKeys": lapAndTbolt(lapSocial, tboltSocialTop),
+  "9:#locationKeys": lapAndTbolt(lapSocial, tboltSocialBot),
 
   // Resize bindings
   "right: #resizeKeys1": S.op("resize", { width: "+10%", height: "+0" }),
