@@ -227,16 +227,19 @@ bindAll({
   "4:#throwKeys": S.op("throw", { screen: monTbolt }), // throw to TD but preserve window size
 
   // Focus bindings
-  "s:#focusKeys": S.op("focus", { app: "Safari" }),
-  "t:#focusKeys": S.op("focus", { app: "iTerm" }),
-  "i:#focusKeys": S.op("focus", { app: "iTunes" }),
-  "x:#focusKeys": S.op("focus", { app: "Xcode" }),
-  "m:#focusKeys": S.op("focus", { app: "Messages" }),
-  "b:#focusKeys": S.op("focus", { app: "Tweetbot" }),
-  "w:#focusKeys": S.op("focus", { app: "Wedge" }),
-  "p:#focusKeys": S.op("focus", { app: "Sparrow" }),
-  "c:#focusKeys": S.op("focus", { app: "Google Chrome" }),
-  "f:#focusKeys": S.op("focus", { app: "Finder" }),
+  "s:#focusKeys": S.op("focus", { app: "Safari" }), // *S*afari
+  "t:#focusKeys": S.op("focus", { app: "iTerm" }), // i*T*erm
+  "i:#focusKeys": S.op("focus", { app: "iTunes" }), // *i*Tunes
+  "x:#focusKeys": S.op("focus", { app: "Xcode" }), // *X*code
+  "d:#focusKeys": S.op("focus", { app: "Cheddar" }), // Che*d*dar
+  "v:#focusKeys": S.op("focus", { app: "Preview" }), // Pre*v*iew
+  "m:#focusKeys": S.op("focus", { app: "Messages" }), // *M*essages
+  "k:#focusKeys": S.op("focus", { app: "Skype" }), // S*k*ype
+  "b:#focusKeys": S.op("focus", { app: "Tweetbot" }), // Tweet*b*ot
+  "w:#focusKeys": S.op("focus", { app: "Wedge" }), // *W*edge
+  "p:#focusKeys": S.op("focus", { app: "Sparrow" }), // S*p*arrow
+  "c:#focusKeys": S.op("focus", { app: "Google Chrome" }), // Google *C*hrome
+  "f:#focusKeys": S.op("focus", { app: "Finder" }), // *F*inder
 
   // Etc
   "esc:cmd": S.op("hint"), // window hints
