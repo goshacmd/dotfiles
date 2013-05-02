@@ -129,6 +129,8 @@ var laptopLayout = S.lay("laptop", {
   "Safari": lapFullHash,
   "iTerm": lapFullHash,
   "iTunes": lapFullHash,
+  "Cheddar": lapChatHash,
+  "Preview": lapFullHash,
   "Messages": lapChatHash,
   "Skype": lapChatHash,
   "Tweetbot": lapSocialHash,
@@ -142,10 +144,16 @@ var laptopLayout = S.lay("laptop", {
 var thunderboltLayout = S.lay("thunderbolt", {
   "Safari": tboltKindaLeftHash,
   "iTerm": tboltKindaRightHash,
+  "iTunes": tboltKindaLeftHash,
+  "Cheddar": tboltChatHash,
+  "Preview": tboltKindaLeftHash,
+  "Messages": tboltChatHash,
+  "Skype": tboltChatHash,
   "Tweetbot": tboltSocialTopHash,
   "Wedge": tboltSocialBotHash,
-  "Messages": tboltChatHash,
-  "Xcode": tboltKindaFullHash
+  "Xcode": tboltKindaFullHash,
+  "Sparrow": tboltKindaRightHash,
+  "Google Chrome": tboltKindaFullHash
 });
 
 // 2 monitor layout
