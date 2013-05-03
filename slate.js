@@ -206,7 +206,7 @@ bindAll({
   // Resize bindings
   "right: #resizeKeys1": S.op("resize", { width: "+10%", height: "+0" }),
   "left:  #resizeKeys1": S.op("resize", { width: "-10%", height: "+0" }),
-  "up:    #resizeKeys1": S.op("resize", { width: "+0%", height: "-10%" }),
+  "up:    #resizeKeys1": S.op("resize", { width: "+0", height: "-10%" }),
   "left:  #resizeKeys1": S.op("resize", { width: "+0", height: "+10%" }),
   "right: #resizeKeys2": S.op("resize", { width: "-10%", height: "+0", anchor: "bottom-right" }),
   "left:  #resizeKeys2": S.op("resize", { width: "+10%", height: "+0", anchor: "bottom-right" }),
@@ -241,6 +241,7 @@ bindAll({
   "x:#focusKeys": S.op("focus", { app: "Xcode" }), // *X*code
   "d:#focusKeys": S.op("focus", { app: "Cheddar" }), // Che*d*dar
   "v:#focusKeys": S.op("focus", { app: "Preview" }), // Pre*v*iew
+  "l:#focusKeys": S.op("focus", { app: "VLC" }), // V*L*C
   "m:#focusKeys": S.op("focus", { app: "Messages" }), // *M*essages
   "k:#focusKeys": S.op("focus", { app: "Skype" }), // S*k*ype
   "b:#focusKeys": S.op("focus", { app: "Tweetbot" }), // Tweet*b*ot
