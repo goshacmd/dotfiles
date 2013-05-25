@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim -f'
+export VISUAL='vim -f'
 export PAGER='less'
 
 #
@@ -27,6 +27,8 @@ export PAGER='less'
 
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
+  export LC_ALL=$LANG
+  export LANGUAGE=$LANG
 fi
 
 #

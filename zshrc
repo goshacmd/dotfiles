@@ -15,14 +15,5 @@ fi
 # Fix 256 colors
 source $HOME/src/dotfiles/bin/base16-shell/base16-default.dark.sh
 
-# Env vars
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-
-export EDITOR="vim -f"
-export VISUAL=$EDITOR
-
 # Local settings
 if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
-
