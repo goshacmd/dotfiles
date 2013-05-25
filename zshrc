@@ -12,6 +12,10 @@ fi
 
 # Customize to your needs...
 
+fpath=("$HOME/src/dotfiles/terminal" $fpath)
+autoload -Uz promptinit && promptinit
+prompt 'goshakkk'
+
 # Fix 256 colors
 source $HOME/src/dotfiles/bin/base16-shell/base16-default.dark.sh
 
