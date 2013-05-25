@@ -1,37 +1,19 @@
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="sammy"
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-DISABLE_AUTO_TITLE="true"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-plugins=(git brew gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
+# Customize to your needs...
 
+# Fix 256 colors
 source $HOME/src/dotfiles/bin/base16-shell/base16-default.dark.sh
-source $ZSH/oh-my-zsh.sh
-
-# Disable fucking autocorrect
-unsetopt correct_all
-
-# Aliases
-alias o="open"
-alias br="brew"
-alias b="bundle"
-alias be="bundle exec"
-alias bu="bundle update"
-alias ci="git commit -am"
-alias g="git"
-alias gi="gem install"
-alias r="rails"
-alias vi="vim"
-alias e="vim"
-alias c="clear"
-alias lu="lunchy"
-alias f="foreman"
-alias fs="foreman start"
-alias fr="foreman run"
-alias tm="tmux"
-alias tma="tmux attach"
-alias tmn="tmux new"
-alias tml="tmux ls"
 
 # Env vars
 export LC_ALL=en_US.UTF-8
