@@ -5,6 +5,7 @@ DISABLE_AUTO_TITLE="true"
 
 plugins=(git brew gem github osx pow powder rails3 ruby heroku rbenv zsh-syntax-highlighting)
 
+source $HOME/src/dotfiles/bin/base16-shell/base16-default.dark.sh
 source $ZSH/oh-my-zsh.sh
 
 # Disable fucking autocorrect

@@ -3,4 +3,5 @@ set mouse=a
 
 let mapleader = ","
 let maplocalleader = "\\"
+let base16colorspace=256
 let g:Powerline_symbols = 'fancy'
