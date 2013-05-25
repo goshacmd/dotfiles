@@ -26,12 +26,3 @@ export VISUAL=$EDITOR
 # Local settings
 if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 
-#   ___________________________
-#  < fortune | cowsay | lolcat >
-#   ---------------------------
-#          \   ^__^
-#           \  (oo)\_______
-#              (__)\       )\/\
-#                  ||----w |
-#                  ||     ||
-[[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null

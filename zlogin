@@ -14,9 +14,12 @@
   fi
 } &!
 
-# Print a random, hopefully interesting, adage.
-if (( $+commands[fortune] )); then
-  fortune -a
-  print
-fi
-
+#   ___________________________
+#  < fortune | cowsay | lolcat >
+#   ---------------------------
+#          \   ^__^
+#           \  (oo)\_______
+#              (__)\       )\/\
+#                  ||----w |
+#                  ||     ||
+[[ -e $(which fortune) ]] && fortune | (cowsay || cat) 2&> /dev/null | (lolcat || cat) 2&>/dev/null
