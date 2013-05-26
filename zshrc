@@ -17,7 +17,7 @@ autoload -Uz promptinit && promptinit
 prompt 'goshakkk'
 
 # Fix 256 colors
-source $HOME/src/dotfiles/bin/base16-shell/base16-default.dark.sh
+source $HOME/src/dotfiles/terminal/base16-default.dark.sh
 
 # Local settings
 if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
