@@ -13,3 +13,6 @@
 [submodule "janus/tbone"]
 	path = janus/tbone
 	url = git://github.com/tpope/vim-tbone.git
+[submodule "janus/rust"]
+	path = janus/rust
+	url = https://github.com/wting/rust.vim.git
