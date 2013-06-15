@@ -7,16 +7,20 @@ link() {
 }
 
 link ackrc
-link zshrc
 link gitconfig
 link gitignore
 link ctags
 link tmux.conf
 link vimrc.before
 link vimrc.after
-link gvimrc.after
 link janus
 link gemrc
 link slate.js
+link zlogin
+link zlogout
+link zpreztorc
+link zprofile
+link zshenv
+link zshrc
 
 echo "Installed dotfiles!"

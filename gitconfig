@@ -1,7 +1,7 @@
 [core]
 	editor = vim -f
 	quotepath = false
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
 
 [user]
 	name = Gosha Arinich
@@ -28,9 +28,3 @@
 
 [push]
 	default = current
-
-[hub]
-protocol = https
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
