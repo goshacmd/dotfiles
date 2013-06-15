@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 
-fpath=("$HOME/src/dotfiles/terminal" $fpath)
+fpath=("$HOME/Projects/dotfiles/terminal" $fpath)
 autoload -Uz promptinit && promptinit
 prompt 'goshakkk'
 
