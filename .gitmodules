@@ -19,3 +19,6 @@
 [submodule "janus/YouCompleteMe"]
 	path = janus/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "janus/jekyll"]
+	path = janus/jekyll
+	url = https://github.com/parkr/vim-jekyll.git
