@@ -22,5 +22,6 @@ link zpreztorc
 link zprofile
 link zshenv
 link zshrc
+link tarsnaprc
 
 echo "Installed dotfiles!"
