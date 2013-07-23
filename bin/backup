@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+# Stolen from https://github.com/myfreeweb/dotfiles/blob/master/bin/backup
+
+backup() {
+  FILES=$(echo $argv | sed "s/^[^ ]* //")
+  tarsnap -c -f $1-$(date +%Y-%m-%d-%H:%M) $FILES
+}
+
+backup_file() {
+  [[ -e $1 ]] && backup $(basename $1) $2
+}
+
+backup_dir() {
+  [[ -d $2 ]] && backup $1 $2
+}
+
+backup_last_file() {
+  FILE=$(ls -t $2 | head -n 1)
+  [[ -d $2 ]] && backup $1 $2/$FILE
+}
+
+APPSUP=$HOME/Library/Application\ Support
+
+backup_dir projects $HOME/Projects
+backup_last_file 1password $APPSUP/1Password/Backups
