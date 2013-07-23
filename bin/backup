@@ -20,6 +20,8 @@ backup_last_file() {
 }
 
 APPSUP=$HOME/Library/Application\ Support
+ICHATCONT=$HOME/Library/Containers/com.apple.iChat
 
 backup_dir projects $HOME/Projects
 backup_last_file 1password $APPSUP/1Password/Backups
+backup_dir ichat-messages $ICHATCONT/Data/Library/Messages
