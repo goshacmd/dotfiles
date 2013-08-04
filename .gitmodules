@@ -22,3 +22,6 @@
 [submodule "janus/jekyll"]
 	path = janus/jekyll
 	url = https://github.com/parkr/vim-jekyll.git
+[submodule "janus/dockerfile"]
+	path = janus/dockerfile
+	url = http://github.com/honza/dockerfile.vim
