@@ -1,5 +1,5 @@
 // Utils
-//
+
 var extend = function(what, withWhat) { return _.extend(_.clone(what), withWhat); };
 
 var mapKeys = function(_map, mapper) {
@@ -72,7 +72,7 @@ var bindAll = function(aliases, _bindMap) {
   });
 
   // Bind it, finally.
-  S.bnda(bindMap);
+  S.bindAll(bindMap);
 };
 
 var screenDimension = function(screen) {
@@ -106,7 +106,7 @@ var lapAndTbolt = function(lapCmd, tboltCmd, bothCmd) {
 };
 
 // Configs
-S.cfga({
+S.configAll({
   defaultToCurrentScreen: true,
   secondsBetweenRepeat: 0.1,
   checkDefaultsOnLoad: true,
@@ -120,19 +120,30 @@ var monLaptop = "1440x900",
     monTbolt =  "2560x1440";
 
 // Operations
-var lapFull = S.op("corner", {
-  screen: monLaptop,
+
+var full = S.op("corner", {
   direction: "top-left",
   width: "screenSizeX",
   height: "screenSizeY"
 });
 
-var lapChat = lapFull.dup({ width: "screenSizeX/2" }),
-    lapSocial = lapChat.dup({ direction: "top-right", width: "screenSizeX/3" });
+var left = S.op("corner", {
+  direction: "top-left",
+  width: "screenSizeX/2",
+  height: "screenSizeY"
+});
 
-var tboltFull = lapFull.dup({ screen: monTbolt }),
-    tboltLeft = tboltFull.dup({ width: "screenSizeX/2" }),
-    tboltRight = tboltLeft.dup({ direction: "top-right" }),
+var right = left.dup({ direction: "top-right" });
+
+// Monitor-dependent operations
+
+var lapFull = full.dup({ screen: monLaptop }),
+    lapChat = lapLeft = left.dup({ screen: monLaptop }),
+    lapSocial = lapRight = right.dup({ screen: monLaptop });
+
+var tboltFull = full.dup({ screen: monTbolt }),
+    tboltLeft = left.dup({ screen: monTbolt }),
+    tboltRight = right.dup({ screen: monTbolt }),
     tboltKindaFull = tboltFull.dup({ width: "5*screenSizeX/6" }),
     tboltKindaLeft = tboltFull.dup({ width: "5*screenSizeX/12" }),
     tboltChat = tboltFull.dup({ width: "screenSizeX/6" })
@@ -237,11 +248,11 @@ bindAll({
     "0": lapChat,
     "[": lapSocial,
     ";": lapFull,
-    "1": lapAndTbolt(lapFull, tboltFull),
+    "1": lapAndTbolt(lapFull, tboltFull, full),
     "2": tboltKindaFull,
-    "3": tboltLeft,
+    "3": lapAndTbolt(lapLeft, tboltLeft, left),
     "4": tboltKindaLeft,
-    "5": tboltRight,
+    "5": lapAndTbolt(lapRight, tboltRight, right),
     "6": tboltKindaRight,
     "7": lapAndTbolt(lapChat, tboltChat),
     "8": lapAndTbolt(lapSocial, tboltSocialTop),
