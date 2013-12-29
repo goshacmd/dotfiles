@@ -25,3 +25,6 @@
 [submodule "janus/dockerfile"]
 	path = janus/dockerfile
 	url = http://github.com/honza/dockerfile.vim
+[submodule "janus/goyo"]
+	path = janus/goyo
+	url = https://github.com/junegunn/goyo.vim.git
