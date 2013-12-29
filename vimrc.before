@@ -1,7 +1,13 @@
-set noswapfile backup history=5000
+set noswapfile backup
+set history=5000
 set mouse=a
 
+" Autoread when the file has been changed from outiside
+set autoread
+
 let mapleader = ","
+let g:mapleader = ","
+
 let maplocalleader = "\\"
 let base16colorspace=256
 "let g:Powerline_symbols = 'fancy'
