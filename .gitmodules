@@ -28,3 +28,6 @@
 [submodule "janus/goyo"]
 	path = janus/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "janus/vim-zenroom"]
+	path = janus/vim-zenroom
+	url = https://github.com/amix/vim-zenroom2.git
