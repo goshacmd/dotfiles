@@ -1,7 +1,17 @@
 set background=dark
 colorscheme base16-default
 
-" Mappings
+" # Mappings
+"
+" Buffer fast save
+nmap <leader>w :w!<cr>
+" Tab management
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+" New tab with current buffer's file
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Yank & paste via OS X clipboard
 map <leader>p "*p
 map <leader>y "*y
@@ -11,10 +21,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 " Resizing splits
-nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-nnoremap <silent> <leader>> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-nnoremap <silent> <leader>< :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
+nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<cr>
+nnoremap <silent> <leader>> :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+nnoremap <silent> <leader>< :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
 " No arrow keys
 map <left> <nop>
 map <right> <nop>
