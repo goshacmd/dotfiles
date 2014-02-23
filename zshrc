@@ -16,6 +16,8 @@ fpath=("$HOME/Projects/dotfiles/terminal" $fpath)
 autoload -Uz promptinit && promptinit
 prompt 'goshakkk'
 
+export DOCKER_HOST=tcp://172.16.42.43:4243
+
 # Fix 256 colors
 source $HOME/Projects/dotfiles/terminal/base16-default.dark.sh
 
