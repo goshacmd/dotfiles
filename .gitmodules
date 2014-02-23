@@ -40,3 +40,6 @@
 [submodule "janus/emmet"]
 	path = janus/emmet
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "janus/latex"]
+	path = janus/latex
+	url = https://github.com/jcf/vim-latex.git
