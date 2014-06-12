@@ -3,11 +3,13 @@
 --group
 --sort-files
 --smart-case
+
 --ignore-dir=log
 --ignore-dir=doc
 --ignore-dir=docs
 --ignore-dir=tmp
 --ignore-dir=.sass-cache
+
 --type-add=ruby=rake
 --type-add=html=haml,mustache,hbs,erb,slim
 --type-add=css=sass,scss,less
