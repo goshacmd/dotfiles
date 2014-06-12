@@ -40,3 +40,6 @@
 [submodule "janus/latex"]
 	path = janus/latex
 	url = https://github.com/jcf/vim-latex.git
+[submodule "janus/vim-polyglot"]
+	path = janus/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
