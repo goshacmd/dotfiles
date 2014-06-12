@@ -13,5 +13,3 @@ let base16colorspace=256
 "let g:Powerline_symbols = 'fancy'
 let g:airline_theme = 'simple'
 let g:airline_powerline_fonts = 1
-
-call janus#disable_plugin('YouCompleteMe')
