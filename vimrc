@@ -80,6 +80,7 @@ set history=5000
 set mouse=a
 
 set autoread
+set laststatus=2
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
