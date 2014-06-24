@@ -11,8 +11,7 @@ link gitconfig
 link gitignore
 link ctags
 link tmux.conf
-link vimrc.before
-link vimrc.after
+link vimrc
 link janus
 link gemrc
 link slate.js
