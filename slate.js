@@ -181,14 +181,11 @@ var laptopLayout = S.lay("laptop", {
   "Safari": lapFullHash,
   "iTerm": lapFullHash,
   "iTunes": lapFullHash,
-  "Cheddar": lapChatHash,
   "Preview": lapFullHash,
   "Messages": lapChatHash,
   "Skype": lapChatHash,
   "Tweetbot": lapSocialHash,
-  "Wedge": lapSocialHash,
   "Xcode": lapFullHash,
-  "Sparrow": lapFullHash,
   "Google Chrome": lapFullHash
 });
 
@@ -197,14 +194,11 @@ var thunderboltLayout = S.lay("thunderbolt", {
   "Safari": tboltFullHash,
   "iTerm": tboltFullHash,
   "iTunes": tboltKindaLeftHash,
-  "Cheddar": tboltChatHash,
   "Preview": tboltKindaLeftHash,
   "Messages": tboltChatHash,
   "Skype": tboltChatHash,
   "Tweetbot": tboltSocialTopHash,
-  "Wedge": tboltSocialBotHash,
   "Xcode": tboltFullHash,
-  "Sparrow": tboltKindaRightHash,
   "Google Chrome": tboltFullHash
 });
 
@@ -307,13 +301,11 @@ bindAll({
     t: S.op("focus", { app: "iTerm" }), // i*T*erm
     i: S.op("focus", { app: "iTunes" }), // *i*Tunes
     x: S.op("focus", { app: "Xcode" }), // *X*code
-    d: S.op("focus", { app: "Cheddar" }), // Che*d*dar
     v: S.op("focus", { app: "Preview" }), // Pre*v*iew
     l: S.op("focus", { app: "VLC" }), // V*L*C
     m: S.op("focus", { app: "Messages" }), // *M*essages
     k: S.op("focus", { app: "Skype" }), // S*k*ype
     b: S.op("focus", { app: "Tweetbot" }), // Tweet*b*ot
-    w: S.op("focus", { app: "Wedge" }), // *W*edge
     p: S.op("focus", { app: "Sparrow" }), // S*p*arrow
     c: S.op("focus", { app: "Google Chrome" }), // Google *C*hrome
     f: S.op("focus", { app: "Finder" }), // *F*inder
