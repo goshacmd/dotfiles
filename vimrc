@@ -19,7 +19,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-tbone'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'mbbill/undotree'
 Bundle 'sheerun/vim-polyglot'
 
