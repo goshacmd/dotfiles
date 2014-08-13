@@ -14,6 +14,7 @@ link tmux.conf
 link vimrc
 link janus
 link gemrc
+link railsrc
 link slate.js
 link zlogin
 link zlogout
