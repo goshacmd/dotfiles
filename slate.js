@@ -270,7 +270,7 @@ bindAll({
 
   pushKeys: {
     // Push bindings
-    "/":   S.op("move", { x: "screenSizeX/4", y: 0, width: "screenSizeX/2", height: "screenSizeY" }), // center
+    "/":   S.op("move", { x: "(screenSizeX-windowSizeX)/2", y: "(screenSizeY-windowSizeY)/2", width: "windowSizeX", height: "windowSizeY" }), // center
     n:     S.op("move", { x: "screenSizeX/8", y: 0, width: "3*screenSizeX/4", height: "screenSizeY" }), // normal
     r:     S.op("move", { x: 0, y: 0, width: "screenSizeX", height: "screenSizeY" }), // full-screen
     right: S.op("push", { direction: "right", style: "bar-resize:screenSizeX/3" }),
