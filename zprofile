@@ -9,4 +9,4 @@
 PATH=$PATH:/opt/X11/bin
 PATH=$PATH:/usr/local/MacGPG2/bin
 PATH=$PATH:/usr/texbin
-PATH=$PATH:$HOME/.cabal/bin
+# PATH=$PATH:$HOME/.cabal/bin
