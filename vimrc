@@ -189,4 +189,4 @@ function s:UpdateNERDTree(...)
 endfunction
 
 " NERDCommenter
-map <leader>/ :NERDCommenterToggle<cr>
+map <leader>/ :call NERDComment(0, "toggle")<cr>
