@@ -23,6 +23,8 @@ Bundle 'tpope/vim-endwise'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'mbbill/undotree'
 Bundle 'sheerun/vim-polyglot'
+Bundle 'mxw/vim-jsx'
+Bundle 'mtscout6/vim-cjsx'
 
 " Visuals
 Bundle 'chriskempson/base16-vim'
