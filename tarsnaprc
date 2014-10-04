@@ -28,6 +28,14 @@ exclude *.box
 exclude ~/.vagrant.d
 exclude ~/.gem
 exclude ~/.npm
+exclude ~/.cache
+exclude ~/.cljr
+exclude ~/.cocoapods
+exclude ~/.cabal
+exclude ~/.composer
+exclude ~/.m2
+exclude ~/.node-gyp
+exclude ~/.rbenv
 exclude ~/Dropbox
 exclude ~/VirtualBox\ VMS
 
