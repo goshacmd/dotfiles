@@ -18,6 +18,8 @@ prompt 'goshakkk'
 
 export DOCKER_HOST=tcp://172.16.42.43:4243
 
+alias be='bundle exec'
+
 alias gsu='git submodule foreach git pull'
 
 alias fuck='sudo $(history -p \!\!)'
