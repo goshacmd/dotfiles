@@ -44,6 +44,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /opt/chefdk/bin
   /usr/local/{bin,sbin}
   ~/Projects/dotfiles/bin
   $path

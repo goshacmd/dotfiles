@@ -31,4 +31,4 @@ source $HOME/Projects/dotfiles/terminal/base16-default.dark.sh
 if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 
 # OPAM configuration
-. /Users/goshakkk/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# . /Users/goshakkk/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

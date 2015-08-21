@@ -1,34 +1,36 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" # Bundles
+" # Plugins
 
 " Vundle for Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Custom bundles
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-tbone'
-Bundle 'tpope/vim-endwise'
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'mbbill/undotree'
-Bundle 'sheerun/vim-polyglot'
-Bundle 'mxw/vim-jsx'
-Bundle 'mtscout6/vim-cjsx'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-tbone'
+Plugin 'tpope/vim-endwise'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'mbbill/undotree'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'mxw/vim-jsx'
+Plugin 'mtscout6/vim-cjsx'
 
 " Visuals
-Bundle 'chriskempson/base16-vim'
-Bundle 'bling/vim-airline'
+Plugin 'chriskempson/base16-vim'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
 
 filetype plugin indent on
 
