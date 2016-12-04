@@ -36,6 +36,10 @@ call vundle#end()
 
 filetype plugin indent on
 
+set nobackup nowritebackup
+
+set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*
+
 let mapleader=","
 let maplocalleader="\\"
 
@@ -80,7 +84,7 @@ set wildignore+=*/tmp/librarian/*,*/.vagrant/*,*/.kitchen/*,*/vendor/cookbooks/*
 set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 
-set noswapfile backup
+set noswapfile nobackup
 set backupdir^=~/.vim/_backup//
 
 set history=5000
