@@ -25,6 +25,7 @@ Plugin 'mbbill/undotree'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'mxw/vim-jsx'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'flowtype/vim-flow'
 
 " Visuals
 Plugin 'chriskempson/base16-vim'
