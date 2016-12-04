@@ -28,6 +28,7 @@ Plugin 'mtscout6/vim-cjsx'
 
 " Visuals
 Plugin 'chriskempson/base16-vim'
+Plugin 'mhartington/oceanic-next'
 Plugin 'bling/vim-airline'
 
 call vundle#end()
@@ -43,6 +44,7 @@ let g:airline_powerline_fonts = 1
 
 " # Settings
 
+set t_Co=256
 set background=dark
 colorscheme base16-default
 
