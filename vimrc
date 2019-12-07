@@ -23,9 +23,11 @@ Plugin 'tpope/vim-endwise'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'mbbill/undotree'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'flowtype/vim-flow'
+"Plugin 'mtscout6/vim-cjsx'
+"Plugin 'flowtype/vim-flow'
+Plugin 'reasonml-editor/vim-reason'
 
 " Visuals
 Plugin 'chriskempson/base16-vim'
@@ -44,14 +46,16 @@ let mapleader=","
 let maplocalleader="\\"
 
 let base16colorspace=256
-let g:airline_theme = 'simple'
+"let g:airline_theme = 'simple'
 let g:airline_powerline_fonts = 1
 
 " # Settings
 
 set t_Co=256
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
+" colorscheme default
+set termguicolors
 
 set nocompatible
 set number
