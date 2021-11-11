@@ -12,4 +12,3 @@ PATH=$PATH:/usr/texbin
 # PATH=$PATH:$HOME/.cabal/bin
 PATH=/usr/local/opt/llvm/bin:$PATH
 
-export PATH="$HOME/.cargo/bin:$PATH"
