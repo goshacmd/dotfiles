@@ -38,6 +38,12 @@ if [[ -e $HOME/.zshrc.local ]]; then source $HOME/.zshrc.local; fi
 # OPAM configuration
 # . /Users/goshakkk/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(rbenv init - zsh)"
+export PATH="$(brew --prefix openssl@3)/bin:$PATH"
 export PATH="$(brew --prefix node@16)/bin:$PATH"
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+export LIBRARY_PATH=$LIBRARY_PATH:$(brew --prefix openssl)/lib/
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
