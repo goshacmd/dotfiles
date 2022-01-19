@@ -81,4 +81,4 @@ fi
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
