@@ -1,0 +1,15 @@
+font-family = "CommitMenlo"
+font-size = 13
+theme = "wilmersdorf"
+cursor-color = #eeeeee
+cursor-style = block_hollow
+shell-integration-features = no-cursor
+background-opacity = 0.8
+background-blur-radius = 10
+macos-titlebar-style = tabs
+window-save-state = always
+
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = #ed87d5
+macos-icon-screen-color = #3c66a3
