@@ -37,7 +37,7 @@ fish_add_path -a -P /opt/X11/bin
 fish_add_path -a -P /usr/local/MacGPG2/bin
 fish_add_path -a -P /usr/texbin
 fish_add_path -p -P /opt/local/bin /opt/local/sbin
-source ~/.orbstack/shell/init.fish
+source ~/.orbstack/shell/init2.fish
 fish_add_path -p -P ~/Projects/dotfiles/bin
 fish_add_path -a -P '/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
 fish_add_path -a -P ~/.cargo/bin
